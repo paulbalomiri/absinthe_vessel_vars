@@ -1,6 +1,6 @@
 # AbsintheVesselVars
 
-Implements `FilterScope` and `Anchor` for variables, which are transported through a vessel variable.
+Implements `Vessel` type and `Anchor` concept for variables, which are transported through a vessel variable.
 
 Usefulness by example:
 
