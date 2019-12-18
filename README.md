@@ -102,8 +102,8 @@ because of the `first` argument in the `holds_memberships(first: 2)` list
 
 * How do you now specify that you want to recieve 3 instead of 2 responses for `Jim` (and `Jim` only) ?
 
-by using a `filter_scope` variable in combination with a scope in an anchor.
-The `$first: int` variable declaration must be changed to `$first: AnchorInt`
+by using a `filter` variable field in combination with a `scope` in an anchor.
+The `$first: int` variable declaration must be changed to `$first: anchor_int`
 
 ```json
 {
