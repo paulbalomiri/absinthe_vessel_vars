@@ -4,7 +4,23 @@ Implements `FilterScope` and `Anchor` for variables, which are transported throu
 
 Usefulness by example:
 
-### Anchor Schema
+## Terms
+
+### Vessel
+
+  The vessel is actual type used for transporting variable values of lower level values in the query tree.
+  The place where it is applied is the **Anchor**.
+
+  See the [Vessel Schema Definition documentation](./docs/vessel_schema.md)
+
+### Anchor
+
+  A variable contained in a vessel. The variable is only applied if both the **Filter scope** (`scope` field) and the **Filter defintion** (`filter` field) match
+
+  A *non-existiong (or empty list as) scope* refers to the current object
+  An *non-existing filter* always matches
+
+## Anchor Schema
 
 An anchored Type is defined by importing `AbsintheVessel.Schema`
 and using `arg` definitions in the appropiate locations
@@ -97,7 +113,8 @@ The `$first: int` variable declaration must be changed to `$first: AnchorInt`
       "value": 3,
       "scope": ["organisations", "people"],
       "filter": {
-        "first_name": "Jim"
+          "key": "first_name",
+          "val": "Jim"
       }
     }
   ]
